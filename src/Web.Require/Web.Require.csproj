@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssetBase.cs" />
+    <Compile Include="AssetsContainerBase.cs" />
+    <Compile Include="AsyncScripts.cs" />
+    <Compile Include="IAssetsContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequireHtmlHelperExtensions.cs" />
     <Compile Include="Scripts.cs" />
