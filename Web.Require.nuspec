@@ -16,5 +16,7 @@
   <files>
     <file src="Brandy.Web.Require.dll" target="lib\NET4\Brandy.Web.Require.dll" />
     <file src="Brandy.Web.Require.pdb" target="lib\NET4\Brandy.Web.Require.pdb" />
+    <file src="head.load.js" target="content\Scripts\head.load.js"/>
+    <file src="head.load.min.js" target="content\Scripts\head.load.min.js"/>
   </files>
 </package>

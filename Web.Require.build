@@ -21,7 +21,7 @@
 		<testFile>Brandy.Web.Require.Tests</testFile>
 	</PropertyGroup>
 
-	<Target Name="Full" DependsOnTargets="Init; Clean; Build; testAll; Deploy; nuget"/>
+	<Target Name="Full" DependsOnTargets="Init; Clean; Build; testAll; Deploy; nugetPack"/>
 
 	<Target Name="Init">
 		<MakeDir Directories="$(artifactPath)" Condition="!Exists('$(artifactPath)')"/>
@@ -48,7 +48,7 @@
 		<Exec Command="$(xunit) $(testPath)\bin\$(Configuration)\$(testFile).dll" />
 	</Target>
 
-	<Target Name="nuget">
+	<Target Name="nugetPack">
 		<Exec Command="$(nuget) pack $(nuspec) /basepath $(corePath)\bin\$(Configuration) /outputdirectory $(artifactPath) /version $(version)" />
 	</Target>
 
