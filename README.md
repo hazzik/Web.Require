@@ -1,1 +1,1 @@
-Web.Require is an client site assets manager.
+Web.Require is an client side assets manager.
