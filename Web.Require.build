@@ -19,9 +19,10 @@
 
 		<testPath>$(MSBuildProjectDirectory)\src\Web.Require.Tests</testPath>
 		<testFile>Brandy.Web.Require.Tests</testFile>
+		<PackageOutputDir>$(MSBuildProjectDirectory)\release</PackageOutputDir>
 	</PropertyGroup>
 
-	<Target Name="Full" DependsOnTargets="Init; Clean; Build; testAll; Deploy; nugetPack"/>
+	<Target Name="Full" DependsOnTargets="Init; Clean; Build; TestAll"/>
 
 	<Target Name="Init">
 		<MakeDir Directories="$(artifactPath)" Condition="!Exists('$(artifactPath)')"/>
@@ -35,30 +36,16 @@
 		<AssemblyInfo CodeLanguage="CS"
 					OutputFile="src\CommonAssemblyInfo.cs"
 					AssemblyProduct="Web.Require"
-					AssemblyCopyright="Copyright © hazzik 2011"
+					AssemblyCopyright="Copyright © hazzik 2011 - 2013"
 					ComVisible="false"
 					CLSCompliant="true"
 					AssemblyVersion="$(Version)"
 					AssemblyFileVersion="$(Version)"/>
 
-		<MSBuild Projects="Web.Require.sln" Targets="Build" Properties="Configuration=$(Configuration)"/>
+		<MSBuild Projects="Web.Require.sln" Targets="Build" Properties="Configuration=$(Configuration);PackageOutputDir=$(PackageOutputDir)"/>
 	</Target>
 
-	<Target Name="testAll">
+	<Target Name="TestAll">
 		<Exec Command="$(xunit) $(testPath)\bin\$(Configuration)\$(testFile).dll" />
-	</Target>
-
-	<Target Name="nugetPack">
-		<Exec Command="$(nuget) pack $(nuspec) /basepath $(corePath)\bin\$(Configuration) /outputdirectory $(artifactPath) /version $(version)" />
-	</Target>
-
-	<Target Name="Deploy">
-		<ItemGroup>
-			<ZipFiles Include="$(corePath)\bin\$(Configuration)\$(coreFile).*" />
-		</ItemGroup>
-		<Zip Files="@(ZipFiles)"
-			WorkingDirectory="$(corePath)\bin\$(Configuration)\"
-			ZipFileName="$(artifactPath)\$(coreFile).$(version).zip"
-			ZipLevel="9"/>
 	</Target>
 </Project>
