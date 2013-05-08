@@ -6,7 +6,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		build.bat = build.bat
 		src\CommonAssemblyInfo.cs = src\CommonAssemblyInfo.cs
 		Web.Require.build = Web.Require.build
-		Web.Require.nuspec = Web.Require.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Require", "src\Web.Require\Web.Require.csproj", "{A5410E7F-6F90-4EA0-9170-1AF4AE4E44A4}"

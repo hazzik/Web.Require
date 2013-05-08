@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Web.Require</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>http://github.com/hazzik/Web.Require</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Web.Require is client dependency framework for ASP.NET MVC</description>
+    <summary>Web.Require is client dependency framework</summary>
+    <language />
+    <tags>Web.Require, ASP.NET MVC, MVC, javascript, js, css, headjs</tags>
+  </metadata>
+  <files>
+  </files>
+</package>

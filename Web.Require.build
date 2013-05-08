@@ -37,6 +37,7 @@
 					OutputFile="src\CommonAssemblyInfo.cs"
 					AssemblyProduct="Web.Require"
 					AssemblyCopyright="Copyright © hazzik 2011 - 2013"
+					AssemblyCompany="BrandyFx"
 					ComVisible="false"
 					CLSCompliant="true"
 					AssemblyVersion="$(Version)"

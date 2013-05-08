@@ -58,8 +58,9 @@
     <Compile Include="StyleSheets.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\head.js" />
-    <Content Include="Scripts\head.min.js" />
+    <None Include="Scripts\head.js" />
+    <None Include="Scripts\head.min.js" />
+    <None Include="Web.Require.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Web.Require.snk">
