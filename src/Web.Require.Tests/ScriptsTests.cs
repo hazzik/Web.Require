@@ -7,16 +7,16 @@
         [Fact]
         public void ToStringShouldOutputScriptTag()
         {
-            var script = new Scripts();
-            script.Add("jquery.js");
-            Assert.Equal(@"<script src=""jquery.js"" type=""text/javascript""></script>", script.ToString());
+            var scripts = new Scripts();
+            scripts.AddScript("jquery.js");
+            Assert.Equal(@"<script src=""jquery.js"" type=""text/javascript""></script>", scripts.Render(null));
         }
 
         [Fact]
         public void ToStringShouldReturnsEmptyIfScriptsIsEmpty()
         {
-            var script = new Scripts();
-            Assert.Empty(script.ToString());
+            var scripts = new Scripts();
+            Assert.Empty(scripts.Render(null));
         }
     }
 }
